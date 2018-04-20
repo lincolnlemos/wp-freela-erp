@@ -31,6 +31,15 @@ class Wp_Freela_Erp_Activator {
 	 */
 	public static function activate() {
 
+
+		/**
+	     * Custom Post Types
+	     */
+	    require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wp-freela-erp-post_types.php';
+	    $plugin_post_types = new Wp_Freela_Erp_Post_Types();
+		$plugin_post_types->create_custom_post_type();
+		flush_rewrite_rules();
+
 	}
 
 }
