@@ -21,7 +21,7 @@
  * @subpackage Wp_Freela_Erp/includes
  * @author     Angolanos <hello@wpfreelaerp.com>
  */
-class Wp_Freela_Erp_Loader {
+class WF_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

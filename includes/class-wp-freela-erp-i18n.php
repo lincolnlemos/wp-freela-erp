@@ -24,7 +24,7 @@
  * @subpackage Wp_Freela_Erp/includes
  * @author     Angolanos <hello@wpfreelaerp.com>
  */
-class Wp_Freela_Erp_i18n {
+class WF_i18n {
 
 
 	/**

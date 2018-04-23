@@ -7,9 +7,6 @@
  * @subpackage Wp_Freela_Erp/includes
  * @author     Angolanos <hello@wpfreelaerp.com>
  */
-
-defined( 'ABSPATH' ) || exit;
-
 class WF_Post_Types {
     
     /**
@@ -242,66 +239,5 @@ class WF_Post_Types {
             $this->register_single_post_type( $fields );
         }
     }
-
-
-    public function create_custom_post_status() {
-
-        $job_statuses = apply_filters(
-            'wf_register_job_order_post_statuses',
-            array(
-                'wf-lead'    => array(
-                    'label'                     => _x( 'Negociação', 'Job status', 'wp-freela-erp' ),
-                    'public'                    => false,
-                    'exclude_from_search'       => false,
-                    'show_in_admin_all_list'    => true,
-                    'show_in_admin_status_list' => true,
-                    /* translators: %s: number of orders */
-                    'label_count'               => _n_noop( 'Negociação <span class="count">(%s)</span>', 'Negociação <span class="count">(%s)</span>', 'woocommerce' ),
-                ),
-                'wf-production'    => array(
-                    'label'                     => _x( 'Produção', 'Job status', 'wp-freela-erp' ),
-                    'public'                    => false,
-                    'exclude_from_search'       => false,
-                    'show_in_admin_all_list'    => true,
-                    'show_in_admin_status_list' => true,
-                    /* translators: %s: number of orders */
-                    'label_count'               => _n_noop( 'Produção <span class="count">(%s)</span>', 'Produção <span class="count">(%s)</span>', 'woocommerce' ),
-                ),
-                'wf-delivered'    => array(
-                    'label'                     => _x( 'Entregue', 'Job status', 'wp-freela-erp' ),
-                    'public'                    => false,
-                    'exclude_from_search'       => false,
-                    'show_in_admin_all_list'    => true,
-                    'show_in_admin_status_list' => true,
-                    /* translators: %s: number of orders */
-                    'label_count'               => _n_noop( 'Entregue <span class="count">(%s)</span>', 'Entregue <span class="count">(%s)</span>', 'woocommerce' ),
-                ),
-                'wf-completed'    => array(
-                    'label'                     => _x( 'Concluído', 'Job status', 'wp-freela-erp' ),
-                    'public'                    => false,
-                    'exclude_from_search'       => false,
-                    'show_in_admin_all_list'    => true,
-                    'show_in_admin_status_list' => true,
-                    /* translators: %s: number of orders */
-                    'label_count'               => _n_noop( 'Concluído <span class="count">(%s)</span>', 'Concluído <span class="count">(%s)</span>', 'woocommerce' ),
-                ),
-                'wf-canceled'    => array(
-                    'label'                     => _x( 'Cancelado', 'Job status', 'wp-freela-erp' ),
-                    'public'                    => false,
-                    'exclude_from_search'       => false,
-                    'show_in_admin_all_list'    => true,
-                    'show_in_admin_status_list' => true,
-                    /* translators: %s: number of orders */
-                    'label_count'               => _n_noop( 'Cancelado <span class="count">(%s)</span>', 'Cancelado <span class="count">(%s)</span>', 'woocommerce' ),
-                ),
-            )
-        );
-
-        foreach ( $order_statuses as $order_status => $values ) {
-            register_post_status( $order_status, $values );
-        }
-
-    }
-
 }
 

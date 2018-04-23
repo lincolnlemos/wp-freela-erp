@@ -43,7 +43,7 @@ define( 'PLUGIN_NAME_VERSION', '1.0.0' );
  */
 function activate_wp_freela_erp() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wp-freela-erp-activator.php';
-	Wp_Freela_Erp_Activator::activate();
+	WF_Activator::activate();
 }
 
 /**
@@ -52,7 +52,7 @@ function activate_wp_freela_erp() {
  */
 function deactivate_wp_freela_erp() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wp-freela-erp-deactivator.php';
-	Wp_Freela_Erp_Deactivator::deactivate();
+	WF_Deactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, 'activate_wp_freela_erp' );

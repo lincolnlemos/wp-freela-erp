@@ -20,7 +20,7 @@
  * @subpackage Wp_Freela_Erp/public
  * @author     Angolanos <hello@wpfreelaerp.com>
  */
-class Wp_Freela_Erp_Public {
+class WF_Public {
 
 	/**
 	 * The ID of this plugin.
@@ -65,10 +65,10 @@ class Wp_Freela_Erp_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Wp_Freela_Erp_Loader as all of the hooks are defined
+		 * defined in WF_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Wp_Freela_Erp_Loader will then create the relationship
+		 * The WF_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
@@ -88,10 +88,10 @@ class Wp_Freela_Erp_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Wp_Freela_Erp_Loader as all of the hooks are defined
+		 * defined in WF_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Wp_Freela_Erp_Loader will then create the relationship
+		 * The WF_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */

@@ -20,7 +20,7 @@
  * @subpackage Wp_Freela_Erp/includes
  * @author     Angolanos <hello@wpfreelaerp.com>
  */
-class Wp_Freela_Erp_Deactivator {
+class WF_Deactivator {
 
 	/**
 	 * Short Description. (use period)
