@@ -297,8 +297,8 @@ class WF_Post_Types {
             )
         );
 
-        foreach ( $order_statuses as $order_status => $values ) {
-            register_post_status( $order_status, $values );
+        foreach ( $job_statuses as $job_status => $values ) {
+            register_post_status( $job_status, $values );
         }
 
     }
