@@ -164,7 +164,8 @@ class Wp_Freela_Erp {
 
 
 		$plugin_post_types = new WF_Post_Types();	    
-	    $this->loader->add_action( 'init', $plugin_post_types, 'create_custom_post_type', 999 );
+	    $this->loader->add_action( 'init', $plugin_post_types, 'create_custom_post_type', 998 );
+	    $this->loader->add_action( 'init', $plugin_post_types, 'create_custom_post_status', 999 );
 
 	}
 

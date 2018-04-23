@@ -38,6 +38,7 @@ class WF_Activator {
 	    require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wp-freela-erp-post_types.php';
 	    $plugin_post_types = new WF_Post_Types();
 		$plugin_post_types->create_custom_post_type();
+		$plugin_post_types->create_custom_post_status();
 		flush_rewrite_rules();
 
 	}
