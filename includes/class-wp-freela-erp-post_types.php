@@ -209,7 +209,7 @@ class WF_Post_Types {
 
             // JOB Post Type
             array(
-                'slug'                  => 'wferp-job',
+                'slug'                  => 'wf-job',
                 'singular'              => __('Job','wp-freela-erp'),
                 'plural'                => __('Jobs','wp-freela-erp'),
                 'menu_name'             => __('Jobs','wp-freela-erp'),
