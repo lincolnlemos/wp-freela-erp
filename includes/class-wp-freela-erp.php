@@ -162,6 +162,16 @@ class Wp_Freela_Erp {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
+		// Options Page
+		// Save/Update
+		$this->loader->add_action('admin_init', $plugin_admin, 'options_update');
+		// Add menu item
+		$this->loader->add_action( 'admin_menu', $plugin_admin, 'add_plugin_admin_menu' );
+		// Add Settings link to the plugin
+		$plugin_basename = plugin_basename( plugin_dir_path( __DIR__ ) . $this->plugin_name . '.php' );
+		$this->loader->add_filter( 'plugin_action_links_' . $plugin_basename, $plugin_admin, 'add_action_links' );
+
+		
 
 		$plugin_post_types = new WF_Post_Types();	    
 	    $this->loader->add_action( 'init', $plugin_post_types, 'create_custom_post_type', 998 );
