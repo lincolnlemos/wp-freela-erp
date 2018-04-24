@@ -166,5 +166,42 @@ class WF_Admin {
 
 	}
 
+	// save custom fields for jobs
+		public function save_meta_options() {
+
+	    if ( ! current_user_can( '' ) ) return;
+
+	    global $post;
+	    update_post_meta($post->ID, "job_id", $_POST["job_id"]);
+	    update_post_meta($post->ID, "job_responsible", $_POST["job_responsible"]);
+
+		}
+
+		// create meta box for custom fields jobs
+		public function rerender_meta_options() {
+			add_meta_box("job-meta", "Job Details", array($this, "display_meta_options"), "wf-job", "normal", "high");
+		}
+
+		// display meta box and custom fields for jobs
+		public function display_meta_options() {
+
+	    global $post;
+	    $custom = get_post_custom($post->ID);
+
+	    $job_id = $custom["job_id"][0];
+	    $job_responsible = $custom["job_responsible"][0];
+
+	  ?>
+	  	<label><?php _e( 'Company:', $this->plugin_name ); ?></label>
+	  	<input name="job_id" value="<?php echo $job_id; ?>" />
+
+	  	<br>
+
+	    <label><?php _e( 'Responsible:', $this->plugin_name ); ?></label>
+	    <input name="job_responsible" value="<?php echo $job_responsible; ?>" />
+	  <?php
+
+		}
+
 
 }
